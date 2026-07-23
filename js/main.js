@@ -206,6 +206,40 @@
   var flipReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var flipCards = document.querySelectorAll('.flip-card');
 
+  /* Mobile: the faces are absolutely positioned, so the card row needs an
+     explicit height — but a fixed one sized for the long back face leaves
+     the short front sitting in a mostly-empty row. Instead, measure the
+     face currently showing and size the card to it; the CSS height
+     transition animates the resize in step with the turn. */
+  var flipMobile = window.matchMedia('(max-width: 760px)'); /* must match the CSS single-column breakpoint */
+
+  function faceNaturalHeight(face) {
+    /* Lift the face into normal flow for one synchronous measurement —
+       no paint happens in between, so nothing flashes. */
+    var s = face.style;
+    s.position = 'static';
+    s.height = 'auto';
+    var h = face.offsetHeight;
+    s.position = '';
+    s.height = '';
+    return h;
+  }
+
+  function sizeCard(card) {
+    if (!flipMobile.matches) {
+      card.style.height = '';
+      return;
+    }
+    var showing = card.classList.contains('is-flipped')
+      ? '.flip-card__back'
+      : '.flip-card__front';
+    card.style.height = faceNaturalHeight(card.querySelector(showing)) + 'px';
+  }
+
+  function sizeAllCards() {
+    flipCards.forEach(sizeCard);
+  }
+
   flipCards.forEach(function (card) {
     var inner = card.querySelector('.flip-card__inner');
     var flipped = card.classList.contains('is-flipped');
@@ -215,6 +249,7 @@
       flipped = next;
       card.classList.toggle('is-flipped', next);
       card.setAttribute('aria-pressed', String(next));
+      sizeCard(card); /* mobile: grow/shrink to the face now showing */
     }
 
     /* ease-in-out cubic — close match for the old cubic-bezier(.645,.045,.355,1) */
@@ -267,6 +302,11 @@
       }
     });
   });
+
+  /* Initial sizing + keep it correct across rotation / viewport changes */
+  sizeAllCards();
+  window.addEventListener('resize', sizeAllCards);
+  if (flipMobile.addEventListener) flipMobile.addEventListener('change', sizeAllCards);
 })();
 
 (function () {
@@ -433,6 +473,32 @@
       goToProject(parseInt(tab.dataset.index, 10));
     });
   });
+
+  /* Touch swipe — on mobile / tablet (pin collapsed, scrollDriven false)
+     a horizontal finger swipe on the showcase flips projects directly.
+     Listeners are passive and only act on a clearly horizontal gesture,
+     so normal vertical page scrolling is never blocked. */
+  var swipeArea = document.querySelector('.showcase');
+  if (swipeArea) {
+    var swipeX = 0;
+    var swipeY = 0;
+    var swipeOn = false;
+    swipeArea.addEventListener('touchstart', function (e) {
+      if (scrollDriven()) return; /* desktop pin: scroll already drives it */
+      swipeOn = true;
+      swipeX = e.touches[0].clientX;
+      swipeY = e.touches[0].clientY;
+    }, { passive: true });
+    swipeArea.addEventListener('touchend', function (e) {
+      if (!swipeOn) return;
+      swipeOn = false;
+      var dx = e.changedTouches[0].clientX - swipeX;
+      var dy = e.changedTouches[0].clientY - swipeY;
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        goToProject(activeIndex + (dx < 0 ? 1 : -1));
+      }
+    }, { passive: true });
+  }
 
   /* Track scrubbing */
   function projectFromClientX(clientX) {
