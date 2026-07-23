@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="is-scrollable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>History Museum — UX Case Study | DORN STUDIO</title>
+  <meta name="description" content="A museum companion app that makes planning, entering and exploring effortless for every visitor. A UX case study by Dacjan Dorniok.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1784648000">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body class="is-scrollable">
+
+  <header class="site-nav">
+    <div class="site-nav__inner">
+      <nav class="site-nav__links" aria-label="Section navigation">
+        <a href="index.html#index" class="site-nav__link" data-nav="index">Index</a>
+        <a href="index.html#about" class="site-nav__link" data-nav="about">About</a>
+        <a href="index.html#on-the-side" class="site-nav__link" data-nav="on-the-side">On the side</a>
+      </nav>
+      <a class="site-nav__cv" href="assets/Dacjan_Dorniok_CV.pdf" download aria-label="Download my CV (PDF)">
+        <span class="site-nav__cv-icon" aria-hidden="true">↓</span>
+        Download CV
+      </a>
+    </div>
+  </header>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="cs">
+
+    <!-- HERO / #01 -->
+    <section class="cs-hero">
+      <div class="cs-hero__head">
+        <a class="cs-back" href="index.html#index">← All work</a>
+        <div class="cs-hero__eyebrow">Project No. R2 · UX Case Study</div>
+        <h1 class="cs-hero__title">History Museum</h1>
+        <p class="cs-hero__tagline">Skip the queue. Keep the wonder.</p>
+        <p class="cs-hero__lede">Designing a museum companion app that carries visitors from “should we go?” to “remember when we went?” — queues, maps, language barriers and all.</p>
+
+        <div class="cs-meta">
+          <div class="cs-meta__item"><span class="cs-meta__label">Role</span><span class="cs-meta__value">UX / UI Designer</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Team</span><span class="cs-meta__value">4 UX designers · 1 PM</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Tools</span><span class="cs-meta__value">Figma · FigJam · Google Forms</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Platform</span><span class="cs-meta__value">Mobile app</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Year</span><span class="cs-meta__value">2026</span></div>
+        </div>
+
+        <div class="cs-hero__actions">
+          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/n56QXwGyZoMEDtL3hIBC8Z/-Dino----WIngs---Museum--Copy---Copy-?node-id=3012-4590&p=f&scaling=min-zoom&page-id=3012%3A4589&starting-point-node-id=3012%3A4590" target="_blank" rel="noopener">Open live prototype ↗</a>
+        </div>
+      </div>
+      <div class="cs-hero__figure">
+        <img src="assets/mockup-museum.png" alt="History Museum companion app shown on an iPhone">
+      </div>
+    </section>
+
+    <!-- OVERVIEW VISUALS -->
+    <section class="cs-section cs-section--wide">
+      <div class="cs-section__inner">
+        <div class="cs-figrow cs-figrow--pair reveal">
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/museum/overview-1.jpg" alt="History Museum — overview visual"></figure>
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/museum/overview-2.jpg" alt="History Museum — the visit experience"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- #02 -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">02</span> The one-hour queue</div>
+          <h2 class="cs-section__title">Full of wonder. Impossible to get into.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Early in our research we interviewed Luis — 27, furniture designer, the kind of person who plans his trips around museums. He told us about visiting three museums in Rotterdam in two days. At one, he stood in line for an hour just to buy a ticket. No timed slots. No indication of whether he'd even get in.</p>
+        </div>
+        <div class="cs-quote reveal">
+          <p>“I waited an hour just to get tickets — and only then realised I should have booked beforehand. Nothing told me that.”</p>
+          <cite>Luis, user interview</cite>
+        </div>
+        <div class="cs-body reveal" style="margin-top:24px;">
+          <p>That story became the shorthand for our whole project. <em>Museums are full of wonder. Getting into them — and around them — is not.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #03 -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">03</span> Leave no one outside</div>
+          <h2 class="cs-section__title">One constraint shaped everything: it had to work for everyone.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Our client, a natural history museum, wanted to digitise all of its visitor services. The brief came with one constraint that shaped everything after it: the product had to work for everyone — including visitors with vision, hearing, mobility, and language barriers. As a team of four, we started with a Lean UX Canvas to align on the business problem before touching pixels.</p>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">The questions we kept returning to</div>
+            <ul class="cs-list">
+              <li>Which museum services can be digitised — and do they lose their magic when they are?</li>
+              <li>What are visitors actually looking for in a museum's digital services?</li>
+              <li>How do we measure success?</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Success signals we committed to</div>
+            <ul class="cs-list">
+              <li>Growth in online ticket sales.</li>
+              <li>App adoption in the first three months.</li>
+              <li>Returning virtual visitors.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #04 -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">04</span> Listening before designing</div>
+          <h2 class="cs-section__title">21 survey respondents. Three museums benchmarked.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>We ran a screening survey to recruit, held in-depth interviews, and sent a 13-question survey — <em>Digital Museum Experience</em> — through our networks (21 respondents). In parallel we benchmarked three museums' digital ecosystems: MNAC (Barcelona), Technikmuseum Berlin, and The Met.</p>
+        </div>
+
+        <div class="cs-stats reveal">
+          <div class="cs-stat"><div class="cs-stat__num">94%</div><div class="cs-stat__label">of museum-goers visit while travelling — spontaneous, not planned weeks ahead.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">No.1</div><div class="cs-stat__label">requested feature: online ticket purchasing — then crowd levels and a map.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">1 / 5</div><div class="cs-stat__label">reported accessibility difficulties, for themselves or someone close.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">68%</div><div class="cs-stat__label">reach museum sites and apps on a smartphone.</div></div>
+        </div>
+
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">The finding that reframed it</div>
+          <p>Although most respondents had experienced museum-app frustration, not a single one used a museum app regularly — the problem wasn't only quality, it was <strong>adoption</strong>.</p>
+        </div>
+
+        <div class="cs-card reveal" style="margin-top:16px;">
+          <div class="cs-card__label">Pain clustered around three moments</div>
+          <ul class="cs-list">
+            <li><strong>Before the visit</strong> — confusing websites, information scattered across platforms.</li>
+            <li><strong>At the entrance</strong> — long queues, sold-out surprises, uncertainty about entry.</li>
+            <li><strong>Inside</strong> — getting lost, overcrowded rooms, text panels that say too little.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- #05 -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">05</span> Competitive Analysis</div>
+          <h2 class="cs-section__title">Getting around inside was open territory.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Even the strongest digital ecosystem we benchmarked left gaps — exactly where our research said visitors hurt the most. Nobody fully owned “getting around inside”: indoor navigation and hands-free guidance were open territory.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #06 PERSONAS + JOURNEY -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">06</span> Three visitors, one journey</div>
+          <h2 class="cs-section__title">Design for the visitor the building forgot.</h2>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">01 · The Spontaneous Traveller</div>
+            <h3 class="cs-persona__name">Luis, 27</h3>
+            <p class="cs-persona__facts">Furniture designer · Munich area</p>
+            <p class="cs-persona__quote">“I want to visit museums spontaneously — but buying tickets and finding information should be quick and simple.”</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">02 · The Curious Planner</div>
+            <h3 class="cs-persona__name">Sam, 25</h3>
+            <p class="cs-persona__facts">IT student · Germany</p>
+            <p class="cs-persona__quote">“Without a digital overview, it's hard to know what the museum actually offers.”</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">03 · The World Explorer</div>
+            <h3 class="cs-persona__name">Mei, 65</h3>
+            <p class="cs-persona__facts">Retired · travelling from China</p>
+            <p class="cs-persona__quote">“I want to feel curious and welcome — not lost because I can't understand the language.”</p>
+          </div>
+        </div>
+
+        <div class="cs-table-wrap reveal">
+          <table class="cs-table">
+            <thead><tr><th>Stage</th><th>Where it breaks</th></tr></thead>
+            <tbody>
+              <tr><td>Discover</td><td>Friends &amp; social media — rarely the museum's own channels.</td></tr>
+              <tr><td>Plan</td><td>Scattered info, unclear hours, no previews.</td></tr>
+              <tr><td>Enter</td><td>Queues, sold-out slots, untranslated signage.</td></tr>
+              <tr><td>Explore</td><td>No orientation, crowded rooms, thin context.</td></tr>
+              <tr><td>Remember</td><td>No way to revisit, share, or keep learning.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- #07 -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">07</span> The problem, stated once</div>
+        </div>
+        <div class="cs-quote reveal" style="margin-top:0;">
+          <p>How might we design a mobile-first companion that makes planning, entering, and exploring a museum effortless — for every visitor, including those the building was never built for?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #08 MoSCoW -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">08</span> Four brains, one backlog</div>
+          <h2 class="cs-section__title">Protecting the core from our own enthusiasm.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Four designers brainstorming “how do we convince people to use a museum app?” produces a delightful mess — AI chatbots, achievement badges, art archives, in-app communities. We ran everything through a value-vs-effort matrix, then MoSCoW.</p>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">Must have</div>
+            <ul class="cs-list">
+              <li>Tickets with timed entry &amp; QR; wallet integration.</li>
+              <li>Interactive indoor map.</li>
+              <li>Multilingual audio guides; subtitles &amp; transcripts.</li>
+              <li>QR scan → artefact info; text scaling &amp; contrast.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Should have</div>
+            <ul class="cs-list">
+              <li>Smart route suggestions; estimated waiting times.</li>
+              <li>Offline mode; ticket on smartwatch.</li>
+              <li>Café &amp; shop navigation.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Could / Won't have</div>
+            <ul class="cs-list">
+              <li>Could: AI assistant, gamified collecting, camera recognition, curated tours, social sharing.</li>
+              <li>Won't: AR exhibit overlays, 3D object visualisation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">A detour worth keeping</div>
+          <p>We explored a smartwatch companion — haptic navigation, ticket on your wrist, silent vibration alerts. The phone was the primary device, but for visitors with hearing impairments, hands-free, vibration-based guidance isn't a gadget, it's <strong>access</strong>. We kept the watch as a concept extension and let the phone carry the core journey.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION INTRO + MOODBOARD -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">The Solution</div>
+          <h2 class="cs-section__title">A museum in your pocket.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>We mapped task flows for the three jobs users hire the app for — book a ticket, change the language, learn about the thing in front of you — then moved through lo-fi and mid-fi wireframes into a high-fidelity prototype.</p>
+        </div>
+
+        <div class="cs-section__head reveal" style="margin-top:64px;">
+          <div class="cs-eyebrow">Moodboard</div>
+          <h3 class="cs-section__title" style="font-size:clamp(24px, 3vw, 34px);">Setting the tone.</h3>
+        </div>
+        <div class="cs-body reveal" style="margin-bottom:8px;">
+          <p>Before touching the interface, we gathered the world the app should live in — the texture, drama, and mood of the collection itself, from ancient artefacts to the museum's own spaces.</p>
+        </div>
+        <div class="cs-moodboard reveal">
+          <img src="assets/case/museum/flow.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/intro-1.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/styletile.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/intro-2.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/intro-4.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/intro-3.png" alt="Museum moodboard — reference image">
+          <img src="assets/case/museum/intro-5.png" alt="Museum moodboard — reference image">
+        </div>
+      </div>
+    </section>
+
+    <!-- VISUAL LANGUAGE -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Visual language</div>
+          <h2 class="cs-section__title">Dug from the collection.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>From that moodboard, a palette: Obsidian for ink, Parchment for surfaces, Amber as the wayfinding accent, Crimson for alerts and support. Type is set in Inter on a strict <strong>16-point grid</strong> — quiet enough to let dinosaurs do the talking.</p>
+        </div>
+        <div class="cs-swatches reveal">
+          <div class="cs-swatch"><div class="cs-swatch__chip" style="background:#1A1714;"></div><div class="cs-swatch__name">Obsidian</div><div class="cs-swatch__hex">#1A1714 · Ink</div></div>
+          <div class="cs-swatch"><div class="cs-swatch__chip" style="background:#F0E6D3;"></div><div class="cs-swatch__name">Parchment</div><div class="cs-swatch__hex">#F0E6D3 · Surfaces</div></div>
+          <div class="cs-swatch"><div class="cs-swatch__chip" style="background:#D4782F;"></div><div class="cs-swatch__name">Amber</div><div class="cs-swatch__hex">#D4782F · Wayfinding</div></div>
+          <div class="cs-swatch"><div class="cs-swatch__chip" style="background:#B5312C;"></div><div class="cs-swatch__name">Crimson</div><div class="cs-swatch__hex">#B5312C · Alerts</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONBOARDING -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Feature 01</div>
+          <h2 class="cs-section__title">Onboarding that asks, not assumes.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Accessibility isn't a settings page you find on day three. The first run asks for your language — including British Sign Language — lets you set font size with a live slider, and choose light, dark, or auto appearance. <strong>Mei is welcomed before she ever reaches a ticket counter.</strong></p>
+        </div>
+        <div class="cs-screens reveal">
+          <img src="assets/case/museum/onboard-1.png" alt="Onboarding — language selection">
+          <img src="assets/case/museum/onboard-2.png" alt="Onboarding — font size slider">
+          <img src="assets/case/museum/onboard-3.png" alt="Onboarding — appearance">
+        </div>
+        <p class="cs-cap">Onboarding screens — language choice (incl. British Sign Language), live font-size slider, and appearance.</p>
+      </div>
+    </section>
+
+    <!-- TICKETING -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Feature 02</div>
+          <h2 class="cs-section__title">Ticketing without the queue.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Date, time slot, visitor count — then a detail we're proud of: you choose a starting tour and gate. Full gates are marked, so crowds distribute themselves before anyone arrives. Each ticket can add a free locker and accessibility accommodations, and ends in a QR ticket that lives in the app, your wallet, or your email — <em>Luis's Rotterdam hour, deleted.</em></p>
+        </div>
+        <div class="cs-screens reveal">
+          <img src="assets/case/museum/ticket-1.png" alt="Ticketing — date and time slot">
+          <img src="assets/case/museum/ticket-2.png" alt="Ticketing — gate and accommodations">
+          <img src="assets/case/museum/ticket-3.png" alt="Ticketing — QR ticket">
+        </div>
+        <p class="cs-cap">Ticketing screens — date &amp; time slot, gate choice with full gates marked, and the final QR ticket.</p>
+      </div>
+    </section>
+
+    <!-- WAYFINDING -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Feature 03</div>
+          <h2 class="cs-section__title">Find it and hear it.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>The interactive floor map shows every level, numbers every artefact, and marks overcrowded areas in real time — so “let's skip that room for now” becomes a one-glance decision. Reach the thing you came for, scan its QR code — or type its number if the crowd beat you to it — and it opens with an audio guide, origin story, and deeper reading. Curated tours like <em>Dinosaur Era</em> (4 stops, 45 minutes) chain it all into a narrative.</p>
+        </div>
+        <div class="cs-screens reveal">
+          <img src="assets/case/museum/find-1.png" alt="Wayfinding — interactive floor map">
+          <img src="assets/case/museum/find-2.png" alt="Wayfinding — artefact detail">
+          <img src="assets/case/museum/find-3.png" alt="Wayfinding — curated tour">
+        </div>
+        <p class="cs-cap">Wayfinding screens — the live floor map, an artefact opened with its audio guide, and a curated tour.</p>
+      </div>
+    </section>
+
+    <!-- #09 + #10 TESTING -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">09 / 10</span> Reality check</div>
+          <h2 class="cs-section__title">We knew things the interface never said out loud.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>We ran a moderated usability test of the prototype — and the polite version is that reality gave us notes. Every fix folded back into the final, end-to-end prototype.</p>
+        </div>
+        <div class="cs-table-wrap reveal">
+          <table class="cs-table cs-table--free">
+            <thead><tr><th>What testing revealed</th><th>The fix</th></tr></thead>
+            <tbody>
+              <tr><td>Prices on recommendation cards made free tours look paid.</td><td>“Free with your ticket” labels wherever a tour appears; prices removed from tour cards.</td></tr>
+              <tr><td>The download-ticket button sat below the fold — users weren't sure the ticket saved.</td><td>Primary actions moved up; explicit “your ticket has been added” confirmation.</td></tr>
+              <tr><td>Dropdowns for simple yes/no questions (locker, special needs) felt heavy.</td><td>Replaced with radio buttons — one glance, one tap.</td></tr>
+              <tr><td>The artefact-code icon read as “calculator”; small unlabeled controls confused people.</td><td>Explanatory text on the scanner; larger play button; “Next / Previous” labels.</td></tr>
+              <tr><td>Post-tour shop coupons felt like aggressive selling at a reflective moment.</td><td>Recommendations toned down and clarified — what the discount is, and that it's optional.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- #11 -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">11</span> What we took home</div>
+          <h2 class="cs-section__title">Accessibility first is cheaper than accessibility later.</h2>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">What I'd tell my past self</div>
+            <ul class="cs-list">
+              <li><strong>Research beats opinions.</strong> Half our brainstorm didn't survive contact with the survey.</li>
+              <li><strong>Accessibility first is cheaper.</strong> Designing for Mei made the app calmer for everyone.</li>
+              <li><strong>Even one usability test pays for itself.</strong> A single session surfaced five issues.</li>
+              <li><strong>Four designers need one vocabulary.</strong> Lean UX Canvas and MoSCoW kept us one team.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Where it goes next</div>
+            <ul class="cs-list">
+              <li>Testing with visitors who have accessibility needs.</li>
+              <li>Prototyping the smartwatch companion's haptic navigation.</li>
+              <li>Virtual tours for remote visitors.</li>
+              <li>A gamified “collect the collection” mode for younger explorers.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-quote reveal">
+          <p>What started as a project about digitising a museum turned into a project about hospitality — people don't skip museums because they dislike culture, but because the visit makes them feel like outsiders. History Museum treats every visitor like the museum was built for them.</p>
+          <cite>The wonder was never the problem.</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEE IT MOVE -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">See it move</div>
+          <h2 class="cs-section__title">From the first language choice to the last artefact.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Every fix from testing folded back into the design — this walkthrough shows the final prototype end to end, through the Dinosaur Era tour.</p>
+        </div>
+        <div class="cs-device-row reveal">
+          <div class="cs-device">
+            <video data-autoplay muted loop playsinline preload="metadata" src="assets/case/videos/museum-prototype.mp4"></video>
+          </div>
+        </div>
+        <p class="cs-cap">Prototype recording — language onboarding, a timed ticket, and the Dinosaur Era tour. Plays silently.</p>
+        <div class="cs-hero__actions reveal" style="justify-content:center; margin-top:32px;">
+          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/n56QXwGyZoMEDtL3hIBC8Z/-Dino----WIngs---Museum--Copy---Copy-?node-id=3012-4590&p=f&scaling=min-zoom&page-id=3012%3A4589&starting-point-node-id=3012%3A4590" target="_blank" rel="noopener">Try it yourself — open the live prototype ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="cs-next">
+      <div class="cs-next__inner">
+        <div class="cs-next__eyebrow">Next case study</div>
+        <h2 class="cs-next__title">Schuh-Werk — bringing a master craftsman online.</h2>
+        <div class="cs-next__actions">
+          <a class="cs-btn cs-btn--onDark" href="case-schuhwerk.html">Read the next case study →</a>
+          <a class="cs-btn cs-btn--onDarkGhost" href="index.html#index">Back to all work</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__bottom">
+        <span class="site-footer__copy">© 2026 Dacjan Dorniok — Designed &amp; built by hand</span>
+        <span class="site-footer__meta"><span class="status-dot" aria-hidden="true"></span>Open to work · DE <span data-clock>--:--</span></span>
+        <button class="site-footer__top-btn" data-scroll-top type="button">Back to top</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image lightbox / preview -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close preview">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/main.js?v=1784648000"></script>
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="is-scrollable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DORN STUDIO — Dacjan Dorniok, Product Designer</title>
+  <meta name="description" content="Portfolio of Dacjan Dorniok — freelancer & product designer. Selected UX case studies, background, and independent work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1784648000">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body class="is-scrollable">
+
+  <header class="site-nav">
+    <div class="site-nav__inner">
+      <nav class="site-nav__links" aria-label="Section navigation">
+        <a href="#index" class="site-nav__link is-active" data-nav="index">Index</a>
+        <a href="#about" class="site-nav__link" data-nav="about">About</a>
+        <a href="#on-the-side" class="site-nav__link" data-nav="on-the-side">On the side</a>
+      </nav>
+      <a class="site-nav__cv" href="assets/Dacjan_Dorniok_CV.pdf" download aria-label="Download my CV (PDF)">
+        <span class="site-nav__cv-icon" aria-hidden="true">↓</span>
+        Download CV
+      </a>
+    </div>
+  </header>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================ INDEX ============================ -->
+  <section id="index" class="hero-scroll" data-section aria-label="Home — Selected Work">
+    <div class="hero-pin">
+      <div class="hero" id="hero" aria-label="Home — Hero">
+
+        <div class="hero__glow hero__glow--gold" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--olive" aria-hidden="true"></div>
+
+        <div class="hero__media">
+          <img id="heroImage" class="hero__illustration" src="assets/hero-illustration.jpg" alt="Illustrated character motif">
+        </div>
+
+        <div class="hero__body">
+          <div id="heroText" class="hero__text">
+
+            <div class="eyebrow rv" style="--d:.15s">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span class="eyebrow__label">Portfolio · Est. 2026</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="mask"><span class="hero__title-line hero__title-line--ink" style="--d:.25s">DORN</span></span><br>
+              <span class="mask"><span class="hero__title-line hero__title-line--gold" style="--d:.38s">STUDIO</span></span>
+            </h1>
+
+            <div class="hero__byline rv" style="--d:.55s">
+              <span class="hero__name">Dacjan Dorniok</span>
+              <span class="hero__byline-dot" aria-hidden="true"></span>
+              <span class="hero__role">Freelancer &amp; Product Designer</span>
+            </div>
+
+            <div class="showcase rv" style="--d:.7s">
+              <span id="ghostNum" class="showcase__numeral" aria-hidden="true">01</span>
+              <div class="showcase__head">
+                <span class="showcase__label">Selected Work</span>
+                <div class="showcase__arrows">
+                  <button id="prevBtn" class="arrow-btn" type="button" aria-label="Previous project">←</button>
+                  <button id="nextBtn" class="arrow-btn" type="button" aria-label="Next project">→</button>
+                </div>
+              </div>
+
+              <div id="showcaseContent" class="showcase__content">
+                <h3 id="projectTitle" class="showcase__title">Arka</h3>
+                <div class="showcase__row">
+                  <div id="phoneWrap" class="showcase__phone">
+                    <img id="projectMockup" class="showcase__mockup" src="assets/mockup-arka.png" alt="Arka on iPhone mockup">
+                  </div>
+                  <div class="showcase__info">
+                    <p id="projectDesc" class="showcase__desc"></p>
+                    <div class="showcase__links">
+                      <a id="projectCaseLink" class="proto-link proto-link--primary" href="case-arka.html">Read the full case study →</a>
+                      <a id="projectProtoLink" class="proto-link" href="#" target="_blank" rel="noopener">Open live prototype ↗</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="track" class="track" role="slider" aria-label="Project selector" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1" tabindex="0">
+                <div id="trackIndicator" class="track__indicator"></div>
+                <div id="trackHandle" class="track__handle"></div>
+              </div>
+
+              <div class="tabs">
+                <button class="tab is-active" type="button" data-index="0">01 — Arka</button>
+                <button class="tab" type="button" data-index="1">02 — Museum</button>
+                <button class="tab" type="button" data-index="2">03 — Schuh-Werk</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span class="scroll-cue__label">Scroll</span>
+          <span class="scroll-cue__line"></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT ============================ -->
+  <section id="about" data-section aria-label="About">
+
+    <div class="about-hero about-hero--center">
+      <div class="hero__glow hero__glow--gold" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--olive" aria-hidden="true"></div>
+
+      <div class="about-hero__inner about-hero__inner--center">
+        <div class="about-hero__text">
+          <div class="eyebrow eyebrow--center reveal">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            <span class="eyebrow__label">Subject File · DRN—02</span>
+          </div>
+          <h2 class="about-hero__name reveal">
+            <span class="hero__title-line--ink">DACJAN</span><br>
+            <span class="hero__title-line--gold">DORNIOK</span>
+          </h2>
+          <p class="about-hero__lede reveal">Product &amp; visual designer working between <em>Poland</em> and <em>Germany</em> — interfaces, identities and artifacts built with cinematic precision.</p>
+
+          <div class="spec-strip spec-strip--center reveal">
+            <div class="spec">
+              <div class="spec__label">Designation</div>
+              <div class="spec__value">Product &amp; Visual Designer</div>
+              <div class="spec__sub">UX/UI · Brand · Graphic</div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Origin</div>
+              <div class="spec__value">Poland</div>
+              <div class="spec__sub">52.23°N · 21.01°E</div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Languages</div>
+              <div class="spec__value">PL · DE · EN</div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Status</div>
+              <div class="spec__value spec__value--status"><span class="status-dot" aria-hidden="true"></span>Available</div>
+              <div class="spec__sub">Open to work</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Product Design <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Brand Identity <span class="marquee__dot"></span></span>
+        <span class="marquee__item">UX / UI <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Illustration <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Print &amp; Editorial <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Motion <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Product Design <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Brand Identity <span class="marquee__dot"></span></span>
+        <span class="marquee__item">UX / UI <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Illustration <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Print &amp; Editorial <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Motion <span class="marquee__dot"></span></span>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline__inner">
+        <div class="section-eyebrow reveal">Personal History</div>
+        <h3 class="section-title timeline__title reveal">The record so far.</h3>
+
+        <div class="history-grid">
+          <div class="flip-card reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Between two cultures — flip for the full story">
+            <div class="flip-card__inner">
+              <div class="flip-card__face flip-card__front">
+                <span class="flip-card__num">01</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">Where I'm from</span>
+                  <h4 class="flip-card__headline">Between two cultures.</h4>
+                  <p class="flip-card__desc">Born in <strong>Poland</strong>, raised in <strong>Germany</strong> — fluent in both worlds, which shapes how I think and design.</p>
+                </div>
+                <span class="flip-card__hint">Flip for the full story <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <span class="flip-card__num">01</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">Where I'm from</span>
+                  <div class="flip-card__headline">Between two cultures.</div>
+                  <p class="flip-card__full">I was born in Poland and moved to Germany at a young age, growing up between two cultures that continue to shape both my perspective and creative approach today. Being raised in an international environment taught me adaptability, openness, and the ability to connect different ways of thinking. This background strongly influences the way I approach design, communication, and creative problem-solving.</p>
+                </div>
+                <span class="flip-card__hint">Flip back <span aria-hidden="true">↩</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Trained as a media designer — flip for the full story">
+            <div class="flip-card__inner">
+              <div class="flip-card__face flip-card__front">
+                <span class="flip-card__num">02</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I used to do</span>
+                  <h4 class="flip-card__headline">Trained as a media designer.</h4>
+                  <p class="flip-card__desc">An <strong>Ausbildung</strong> in Germany — branding, layout and visual storytelling as a foundation.</p>
+                </div>
+                <span class="flip-card__hint">Flip for the full story <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <span class="flip-card__num">02</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I used to do</span>
+                  <div class="flip-card__headline">Trained as a media designer.</div>
+                  <p class="flip-card__full">I completed my Ausbildung as a media designer in Germany, where I developed a foundation in branding, visual design, layout, digital content, and creative production. During that time, I worked in a media-focused environment that helped me understand professional workflows, client communication, and the importance of strong visual storytelling.</p>
+                </div>
+                <span class="flip-card__hint">Flip back <span aria-hidden="true">↩</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Design meets technology — flip for the full story">
+            <div class="flip-card__inner">
+              <div class="flip-card__face flip-card__front">
+                <span class="flip-card__num">03</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I do now</span>
+                  <h4 class="flip-card__headline">Design meets technology.</h4>
+                  <p class="flip-card__desc">Moving into <strong>UX/UI</strong> and interactive work — aesthetics with function.</p>
+                </div>
+                <span class="flip-card__hint">Flip for the full story <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <span class="flip-card__num">03</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I do now</span>
+                  <div class="flip-card__headline">Design meets technology.</div>
+                  <p class="flip-card__full">Today, I continue to expand my creative skill set while exploring the intersection of design, technology, and digital experiences. My focus is moving toward more future-oriented creative fields such as UX/UI design, motion, digital branding, and interactive concepts. I'm constantly learning, refining my process, and building projects that combine aesthetics with functionality.</p>
+                </div>
+                <span class="flip-card__hint">Flip back <span aria-hidden="true">↩</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Eyes on Warsaw — flip for the full story">
+            <div class="flip-card__inner">
+              <div class="flip-card__face flip-card__front">
+                <span class="flip-card__num">04</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">Where I'm at now</span>
+                  <h4 class="flip-card__headline">Eyes on Warsaw.</h4>
+                  <p class="flip-card__desc">Based in Germany, planning a move to <strong>Warsaw</strong> — its energy fits my goals.</p>
+                </div>
+                <span class="flip-card__hint">Flip for the full story <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <span class="flip-card__num">04</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">Where I'm at now</span>
+                  <div class="flip-card__headline">Eyes on Warsaw.</div>
+                  <p class="flip-card__full">I'm currently based in Germany and working on developing my portfolio, sharpening my creative direction, and preparing for the next stage of my career. At the same time, I'm planning a future move to Warsaw — a city whose creative energy, growing tech scene, and international environment strongly align with my long-term goals.</p>
+                </div>
+                <span class="flip-card__hint">Flip back <span aria-hidden="true">↩</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Room to grow — flip for the full story">
+            <div class="flip-card__inner">
+              <div class="flip-card__face flip-card__front">
+                <span class="flip-card__num">05</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I'm looking for</span>
+                  <h4 class="flip-card__headline">Room to grow.</h4>
+                  <p class="flip-card__desc">Ambitious people. Meaningful work. Space to <strong>grow creatively</strong>.</p>
+                </div>
+                <span class="flip-card__hint">Flip for the full story <span aria-hidden="true">→</span></span>
+              </div>
+              <div class="flip-card__face flip-card__back">
+                <span class="flip-card__num">05</span>
+                <div class="flip-card__body">
+                  <span class="flip-card__tag">What I'm looking for</span>
+                  <div class="flip-card__headline">Room to grow.</div>
+                  <p class="flip-card__full">I'm looking for opportunities that allow me to grow creatively, collaborate with ambitious people, and work on meaningful visual and digital experiences. My goal is to join a forward-thinking team where I can contribute with creativity, adaptability, and strong design thinking while continuing to evolve professionally in an international environment.</p>
+                </div>
+                <span class="flip-card__hint">Flip back <span aria-hidden="true">↩</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================= ON THE SIDE ========================= -->
+  <section id="on-the-side" data-section aria-label="On the side">
+
+    <div class="side-hero">
+      <div class="side-hero__inner">
+        <div class="side-hero__row reveal">
+          <span class="side-hero__eyebrow">Side Channels · DRN-02</span>
+          <span class="side-hero__status">3 channels online</span>
+        </div>
+
+        <div class="side-hero__main reveal">
+          <h2 class="side-hero__title">
+            <span class="hero__title-line--ink">ON THE</span><br>
+            <span class="hero__title-line--gold">SIDE</span>
+          </h2>
+          <p class="side-hero__lede">Not everything I make has a brief. This is the personal channel — <strong>logo marks</strong> built on clean geometry, <strong>print pieces</strong> made for real events, and <strong>creatures drawn by hand</strong> for nothing but the joy of it. Three channels below — pick one and tune in.</p>
+        </div>
+
+        <div class="side-hero__tagline reveal">
+          <span class="eyebrow__dot" aria-hidden="true"></span>
+          Logos · Print · Drawings — the analog signal behind the screen
+        </div>
+
+        <nav class="channel-nav reveal" aria-label="Channels">
+          <a href="#logos" class="channel-nav__item" data-preview="assets/logo-wdrazaj.png">
+            <span class="channel-nav__num">01</span>
+            <span class="channel-nav__label">Logos &amp; Marks</span>
+            <span class="channel-nav__cta">Tune in ↗</span>
+          </a>
+          <a href="#print" class="channel-nav__item" data-preview="assets/print-ega.jpg">
+            <span class="channel-nav__num">02</span>
+            <span class="channel-nav__label">Print Matter</span>
+            <span class="channel-nav__cta">Tune in ↗</span>
+          </a>
+          <a href="#drawings" class="channel-nav__item" data-preview="assets/sketch-04.jpg">
+            <span class="channel-nav__num">03</span>
+            <span class="channel-nav__label">Drawings</span>
+            <span class="channel-nav__cta">Tune in ↗</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__item">Logos <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Print <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Drawings <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">The analog signal <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Off-grid <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">By hand <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Logos <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">Print <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Drawings <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">The analog signal <span class="marquee__dot"></span></span>
+        <span class="marquee__item">Off-grid <span class="marquee__dot"></span></span>
+        <span class="marquee__item marquee__item--outline">By hand <span class="marquee__dot"></span></span>
+      </div>
+    </div>
+
+    <div id="logos" class="channel channel--logos">
+      <div class="channel__inner">
+        <div class="channel__head reveal">
+          <div>
+            <span class="channel__tag">CH—01 // Identity</span>
+            <h3 class="channel__title">Logos &amp; Marks</h3>
+          </div>
+          <div class="channel__meta">Construction · Grids · Geometry</div>
+        </div>
+
+        <div class="logo-feature reveal">
+          <div class="logo-feature__label">Featured — 01</div>
+          <div class="logo-feature__stage">
+            <img src="assets/logo-wdrazaj.png" alt="Wdrazaj.AI logo mark" class="logo-feature__img">
+          </div>
+          <h4 class="logo-feature__name">Client logo_Wdrazaj.AI</h4>
+          <p class="logo-feature__desc">I designed a modern, scalable logo for the company, focusing on clear geometry, balanced proportions, and a versatile identity that works across digital and print applications.</p>
+          <div class="logo-feature__footer">
+            <span>Grid · 40U</span>
+            <span>Vector ✓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="print" class="channel channel--print channel--alt">
+      <div class="channel__inner">
+        <div class="channel__head reveal">
+          <div>
+            <span class="channel__tag">CH—02 // Editorial</span>
+            <h3 class="channel__title">Print Matter</h3>
+          </div>
+          <div class="channel__meta">Brochures · Flyers · Catalogs</div>
+        </div>
+
+        <div class="print-scroll reveal">
+          <img src="assets/print-ega.jpg" alt="EGA swim club campaign poster" class="print-scroll__item">
+          <img src="assets/print-waldtriathlon.jpg" alt="Waldtriathlon event poster" class="print-scroll__item">
+          <img src="assets/print-confetti.jpg" alt="Confetti 50th anniversary brochure spread" class="print-scroll__item">
+        </div>
+      </div>
+    </div>
+
+    <div id="drawings" class="channel channel--drawings">
+      <div class="channel__inner">
+        <div class="channel__head reveal">
+          <div>
+            <span class="channel__tag">CH—03 // By Hand</span>
+            <h3 class="channel__title">Drawings</h3>
+          </div>
+          <div class="channel__meta">Pinned · Raw · Analog</div>
+        </div>
+
+        <div class="sketch-grid reveal">
+          <figure class="sketch-card"><img src="assets/sketch-01.jpg" alt="Digital painting of a marble bust with antlers" loading="lazy"><figcaption>Sketch — 01</figcaption></figure>
+          <figure class="sketch-card"><img src="assets/sketch-02.jpg" alt="Illustration of a horned figure rowing a boat through a dark forest" loading="lazy"><figcaption>Sketch — 02</figcaption></figure>
+          <figure class="sketch-card"><img src="assets/sketch-03.jpg" alt="Illustration of a wolf with a galaxy-like tail" loading="lazy"><figcaption>Sketch — 03</figcaption></figure>
+          <figure class="sketch-card"><img src="assets/sketch-04.jpg" alt="Illustration of an antlered wolf skull beneath a crescent moon" loading="lazy"><figcaption>Sketch — 04</figcaption></figure>
+          <figure class="sketch-card"><img src="assets/sketch-05.jpg" alt="Illustration of a multi-tailed fox creature" loading="lazy"><figcaption>Sketch — 05</figcaption></figure>
+          <figure class="sketch-card"><img src="assets/sketch-06.jpg" alt="Illustration of a cloaked, faceless figure in a wizard hat" loading="lazy"><figcaption>Sketch — 06</figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== LET'S WORK TOGETHER ===================== -->
+  <section class="collab" aria-label="Let's work together">
+    <img src="assets/collab-accent.jpg" alt="" class="collab__accent" aria-hidden="true">
+    <div class="collab__inner">
+      <div class="section-eyebrow reveal">Dorn Studio · Collaboration</div>
+      <a class="mega-cta reveal" href="#contact" data-focus-form aria-label="Jump to the contact form — let's work together">Let's work<br>together</a>
+      <div class="collab__grid reveal">
+        <a class="collab-card" href="mailto:dacjan.dorniok@gmail.com">
+          <div class="collab-card__label">E-Mail — click to write</div>
+          <div class="collab-card__value">dacjan.dorniok@gmail.com</div>
+        </a>
+        <a class="collab-card" href="tel:+48530865288">
+          <div class="collab-card__label">Phone — PL</div>
+          <div class="collab-card__value">+48 530 865 288</div>
+        </a>
+        <a class="collab-card" href="tel:+4915208846896">
+          <div class="collab-card__label">Phone — DE</div>
+          <div class="collab-card__value">+49 152 08846896</div>
+        </a>
+        <div class="collab-card">
+          <div class="collab-card__label">Based</div>
+          <div class="collab-card__value">Poland &amp; Germany</div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contact" novalidate>
+        <h3 class="contact-form__heading">Or write it right here —</h3>
+        <div class="contact-form__row">
+          <label class="contact-form__field">
+            <span class="contact-form__label">Your name</span>
+            <input class="contact-form__input" type="text" name="name" id="cfName" placeholder="Jane Doe" required>
+          </label>
+          <label class="contact-form__field">
+            <span class="contact-form__label">Your e-mail</span>
+            <input class="contact-form__input" type="email" name="email" id="cfEmail" placeholder="jane@studio.com" required>
+          </label>
+        </div>
+        <label class="contact-form__field">
+          <span class="contact-form__label">Message</span>
+          <textarea class="contact-form__input contact-form__textarea" id="cfMessage" rows="5" placeholder="Tell me about your project…" required></textarea>
+        </label>
+        <div class="contact-form__actions">
+          <button class="cs-btn cs-btn--primary" type="submit">Send message →</button>
+          <span class="contact-form__hint">Opens your e-mail app with everything filled in.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__grid">
+        <div>
+          <div class="site-footer__logo">DORN STUDIO</div>
+          <p class="site-footer__tagline">Freelance product &amp; visual designer. Interfaces, identities and artifacts built with cinematic precision.</p>
+        </div>
+        <div>
+          <div class="site-footer__heading" style="color:var(--rust);">WORK</div>
+          <div class="site-footer__links">
+            <a href="#index">Project 1 — Arka</a>
+            <a href="#index">Project 2 — History Museum</a>
+            <a href="#index">Project 3 — Schuh-Werk &amp; Statik</a>
+          </div>
+        </div>
+        <div>
+          <div class="site-footer__heading" style="color:var(--olive);">NAVIGATE</div>
+          <div class="site-footer__links">
+            <a href="#index">Index</a>
+            <a href="#about">About</a>
+            <a href="#on-the-side">On the side</a>
+          </div>
+        </div>
+        <div>
+          <div class="site-footer__heading" style="color:var(--gold-deep);">CONNECT</div>
+          <div class="site-footer__links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Behance</a>
+            <a href="mailto:dacjan.dorniok@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span class="site-footer__copy">© 2026 Dacjan Dorniok — Designed &amp; built by hand</span>
+        <span class="site-footer__meta"><span class="status-dot" aria-hidden="true"></span>Open to work · DE <span data-clock>--:--</span></span>
+        <button class="site-footer__top-btn" data-scroll-top type="button">Back to top</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image lightbox / preview -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close preview">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/main.js?v=1784648000"></script>
+</body>
+</html>

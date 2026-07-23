@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en" class="is-scrollable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arka — UX Case Study | DORN STUDIO</title>
+  <meta name="description" content="Arka — a civic-coordination layer for people who find a stray or injured animal in Poland. A UX case study by Dacjan Dorniok.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1784648000">
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body class="is-scrollable">
+
+  <header class="site-nav">
+    <div class="site-nav__inner">
+      <nav class="site-nav__links" aria-label="Section navigation">
+        <a href="index.html#index" class="site-nav__link" data-nav="index">Index</a>
+        <a href="index.html#about" class="site-nav__link" data-nav="about">About</a>
+        <a href="index.html#on-the-side" class="site-nav__link" data-nav="on-the-side">On the side</a>
+      </nav>
+      <a class="site-nav__cv" href="assets/Dacjan_Dorniok_CV.pdf" download aria-label="Download my CV (PDF)">
+        <span class="site-nav__cv-icon" aria-hidden="true">↓</span>
+        Download CV
+      </a>
+    </div>
+  </header>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="cs">
+
+    <!-- HERO / #01 OVERVIEW -->
+    <section class="cs-hero">
+      <div class="cs-hero__head">
+        <a class="cs-back" href="index.html#index">← All work</a>
+        <div class="cs-hero__eyebrow">Project No. R1 · UX Case Study</div>
+        <h1 class="cs-hero__title">Arka</h1>
+        <p class="cs-hero__tagline">The undesigned edges of animal rescue.</p>
+        <p class="cs-hero__lede">A civic-coordination layer for people who find a stray or injured animal in Poland — triaging what they've found, routing them to a responder with real capacity, and closing the loop once the animal is safe.</p>
+
+        <div class="cs-meta">
+          <div class="cs-meta__item"><span class="cs-meta__label">Role</span><span class="cs-meta__value">UX / Product Designer</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Team</span><span class="cs-meta__value">3 UX designers · 1 PM</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Tools</span><span class="cs-meta__value">Figma · Google Forms · Notion</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Platform</span><span class="cs-meta__value">Mobile-first web</span></div>
+          <div class="cs-meta__item"><span class="cs-meta__label">Year</span><span class="cs-meta__value">2026</span></div>
+        </div>
+
+        <div class="cs-hero__actions">
+          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/fJ3T5UYHN63B6CtRnKB1QG/Arka?node-id=100-11&p=f&scaling=scale-down&page-id=96%3A2&starting-point-node-id=100%3A11" target="_blank" rel="noopener">Open live prototype ↗</a>
+        </div>
+      </div>
+      <div class="cs-hero__figure">
+        <img src="assets/mockup-arka.png" alt="Arka triage flow shown on an iPhone">
+      </div>
+    </section>
+
+    <!-- OVERVIEW VISUALS -->
+    <section class="cs-section cs-section--wide">
+      <div class="cs-section__inner">
+        <div class="cs-figrow cs-figrow--pair reveal">
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/arka/overview-1.jpg" alt="Arka — project overview visual"></figure>
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/arka/overview-2.jpg" alt="Arka — a found animal, the moment of need"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- #02 PROBLEM -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">02</span> The Problem</div>
+          <h2 class="cs-section__title">Everything around the adoption match is left undesigned.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Shelters and rescue platforms pour their design energy into one moment: <em>the adoption match</em>. Everything around it is left undesigned — starting with the front door. When someone finds a stray, injured, or abandoned animal, they want to help but immediately hit a wall: which shelter? Municipal or private? Are they full? Who's responsible? Who pays?</p>
+          <p>Well-meaning people are left holding a frightened animal with nowhere to route it — and many simply give up, while the animals that need help most fall through the gaps between institutions.</p>
+        </div>
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">Core insight</div>
+          <p>The reporting-to-rescue chain is fragmented across phone numbers, Facebook groups, and overwhelmed organizations with no shared view of capacity.</p>
+        </div>
+        <div class="cs-quote reveal">
+          <p>How might I connect the person who finds an animal with the nearest responder who actually has capacity — turning a dead end into a clear, trackable path to rescue?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #03 GOALS -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">03</span> Goals</div>
+          <h2 class="cs-section__title">What success looks like — for both sides.</h2>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">User goals</div>
+            <ul class="cs-list">
+              <li>Figure out what the animal is and whether it even needs intervention.</li>
+              <li>Figure out who is responsible and reach someone with actual capacity.</li>
+              <li>Get a clear, trackable next step — not be left holding the animal alone.</li>
+              <li>Know how it ended (closure).</li>
+              <li>Feel they did right by the animal, without needing an insider contact.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Business / project goals</div>
+            <ul class="cs-list">
+              <li>↑ Share of found-animal cases that reach a responder with capacity.</li>
+              <li>↓ Time from “found” to “routed to the right responder.”</li>
+              <li>↑ Correct-triage rate (owned → reunification, stray → rescue/foster, wild → rehab).</li>
+              <li>↓ % of finders who give up or default to keeping the animal.</li>
+              <li>↑ First-time, non-insider finders who complete the journey; ↑ reunification rate.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #04 RESEARCH -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">04</span> Research</div>
+          <h2 class="cs-section__title">I didn't design from assumptions — I went and talked to people.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Finders, two vets, and a wildlife-rescue responder in Kraków, plus nearly twenty shelters and foundations contacted directly — including Schronisko na Paluchu (Warsaw's main municipal shelter) and the specialist clinic Lecznica Płocka.</p>
+        </div>
+
+        <div class="cs-stats reveal">
+          <div class="cs-stat"><div class="cs-stat__num">53</div><div class="cs-stat__label">people surveyed.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">6</div><div class="cs-stat__label">in-depth interviews.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">69%</div><div class="cs-stat__label">of finders keep the strays themselves.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">51%</div><div class="cs-stat__label">call a vet first — the accidental front door.</div></div>
+          <div class="cs-stat"><div class="cs-stat__num">44%</div><div class="cs-stat__label">of adopters returned or considered it.</div></div>
+        </div>
+
+        <div class="cs-body reveal" style="margin-top:40px;">
+          <p><strong>What came out of it:</strong></p>
+        </div>
+        <div class="cs-card reveal" style="margin-top:16px;">
+          <ul class="cs-list">
+            <li><strong>The vet is the real front door</strong> — not because it's equipped to route a case, just because it's close and never turns anyone away.</li>
+            <li>Every rescue that actually worked had one thing in common: <strong>one person who personally knew someone.</strong> Never the system itself.</li>
+            <li>Some people avoid institutions on purpose, afraid of losing the animal to a shelter they don't trust — so support had to be <strong>decoupled from custody.</strong></li>
+            <li>Finders and the responder independently converged on the same fix, unprompted: verify by photo, walk a decision tree, point to a current map of centres.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- #05 COMPETITIVE -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">05</span> Competitive Analysis</div>
+          <h2 class="cs-section__title">Twelve players, five capabilities — nobody closed the loop.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>I scanned 12 players across Poland, Germany, the UK, and the US against five capabilities — triage, city-specific routing, currency, capacity signal, and hand-off/closure. Three shaped the direction most.</p>
+        </div>
+
+        <div class="cs-logos reveal">
+          <div class="cs-logos__tile"><img src="assets/case/arka/comp-animalhelper.jpg" alt="Animal Helper"></div>
+          <div class="cs-logos__tile"><img src="assets/case/arka/comp-znajda.jpg" alt="Znajda.org"></div>
+          <div class="cs-logos__tile"><img src="assets/case/arka/comp-rspca.webp" alt="RSPCA"></div>
+        </div>
+
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">Animal Helper — closest competitor</div>
+            <ul class="cs-list">
+              <li>Human dispatcher, 24/7 · ~1,000 reports / ~4,000 calls a month.</li>
+              <li>11 of 16 voivodeships — but not Kraków.</li>
+              <li>No self-service triage; no visible closure for the finder.</li>
+              <li><strong>Zero</strong> of 53 survey respondents had heard of it — awareness is as much the gap as capability.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Znajda.org — overlap risk</div>
+            <ul class="cs-list">
+              <li>EU-funded lost/found listing app, push per municipality.</li>
+              <li>Broadcasts a listing — doesn't route.</li>
+              <li>No triage, no capacity signal, no closure.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">RSPCA triage (UK) — proof of concept</div>
+            <ul class="cs-list">
+              <li>Self-service triage that guided 200,000+ people, with wildlife paths.</li>
+              <li>No real-time capacity routing.</li>
+              <li>Proves triage doesn't need a human dispatcher to scale.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">The market gap</div>
+          <p>No player, anywhere, combines self-service triage <strong>and</strong> live capacity <strong>and</strong> finder-side closure. That intersection is genuinely unoccupied.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #06 SYNTHESIS -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">06</span> Synthesis — 62 notes → 12 themes</div>
+          <h2 class="cs-section__title">Every note affinity-mapped bottom-up.</h2>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card"><div class="cs-card__label">Navigable only from the inside</div><p class="cs-feature__desc">Every success story's unlock was one insider.</p></div>
+          <div class="cs-card"><div class="cs-card__label">Information rots</div><p class="cs-feature__desc">Dead numbers, city-specific routing nobody explains.</p></div>
+          <div class="cs-card"><div class="cs-card__label">The vet is the accidental front door</div><p class="cs-feature__desc">Proximity, not design.</p></div>
+          <div class="cs-card"><div class="cs-card__label">The finder absorbs the system's job</div><p class="cs-feature__desc">69% keep or self-rehome by default.</p></div>
+          <div class="cs-card"><div class="cs-card__label">Responsibility has no off-switch</div><p class="cs-feature__desc">Attaches at sighting, rarely discharges.</p></div>
+          <div class="cs-card"><div class="cs-card__label">Mutual distrust gates every hand-off</div><p class="cs-feature__desc">Fear of confiscation vs. underfunded, overloaded orgs.</p></div>
+        </div>
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">Core hypothesis</div>
+          <p>Rescue is navigable only from the inside. The finder's first problems are triage and routing — and responsibility attaches at sighting with no way to discharge it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #08 PERSONA -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">08</span> User Persona</div>
+          <h2 class="cs-section__title">Meet Kasia — the finder who becomes the system.</h2>
+        </div>
+
+        <div class="cs-figrow cs-figrow--persona reveal">
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/arka/persona-kasia.jpg" alt="Kasia — user persona board"></figure>
+          <div class="cs-persona" style="margin:0;">
+            <div>
+              <h3 class="cs-persona__name">Kasia, 30</h3>
+              <p class="cs-persona__facts">Warsaw · Office job, unrelated to animals</p>
+              <p class="cs-persona__quote">“The moment you find an animal, you don't know where to take it — the organizations are always full.”</p>
+            </div>
+            <div>
+              <div class="cs-card__label">Frustrations</div>
+              <ul class="cs-list">
+                <li>Who to call is different in every city; dead phone numbers.</li>
+                <li>Institutions feel closed off, untrustworthy.</li>
+                <li>Surprised she has to pay.</li>
+                <li>Fears that calling anyone means losing the animal.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cs-body reveal" style="margin-top:32px;">
+          <p>Under pressure, she turns to a vet first (an unpaid, accidental triage desk), sometimes acts on the wrong instinct, and defaults to absorbing the problem herself.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- #09 JOURNEY -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">09</span> User Journey</div>
+          <h2 class="cs-section__title">Tuesday evening. A frightened, collarless dog.</h2>
+        </div>
+        <div class="cs-card reveal">
+          <div class="cs-card__label">The journey</div>
+          <p class="cs-feature__desc" style="margin-bottom:16px;">Sighting → Triage attempt → Searching for help → Vet (improvised front door) → Routing dead-end → Default absorption → Aftermath</p>
+          <ul class="cs-list">
+            <li><strong>Low point (Stage 5):</strong> no shared capacity view, slow official channels, no insider to unlock a path.</li>
+            <li>Only bright spot: the vet — itself improvised and unpaid.</li>
+            <li>Ending: no closure, nothing learned by the system, her case invisible.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- #07 CONCEPT -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">07</span> The Concept</div>
+          <h2 class="cs-section__title">A triage-and-routing layer, reachable at the moment of need.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>A web-based layer for anyone who finds an animal — reachable through Google or the vet's front desk, with no app to pre-install. It's a <strong>navigation layer only</strong>: not a rescue-capacity fix, not adoption matching, not the full wildlife chain, not foster tooling.</p>
+        </div>
+
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">Five capabilities</div>
+            <ul class="cs-list">
+              <li>Triage — <strong>must</strong></li>
+              <li>Routing — <strong>must</strong></li>
+              <li>Hand-off &amp; closure — <strong>must</strong></li>
+              <li>Currency (“verified X ago”) — <strong>must</strong></li>
+              <li>Capacity signal — could</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">What it does</div>
+            <ul class="cs-list">
+              <li>Triages the animal, then routes to current, city-specific responders.</li>
+              <li>Tracks the case to closure.</li>
+              <li>Defaults to a radius-based owner search.</li>
+              <li>Supports the finder without requiring surrender.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">Flow 1 · Hand off a stray</div>
+            <p class="cs-feature__desc">Home → Owner-check → First-action guidance → “Find it a place” → Routing list → Contact responder → Closure</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Flow 2 · Wildlife rescue</div>
+            <p class="cs-feature__desc">Home → Triage: wild → Species picker → Species-specific guidance → Who can help now → Closure</p>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">Flow 3 · Keep it &amp; find the owner</div>
+            <p class="cs-feature__desc">Home → Triage → First-action guidance → “Keep it &amp; find the owner” → Holding info → Create Wall post → Publish → Tracked until reunited</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #11 WIREFRAMES -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">11</span> Early Wireframes &amp; Iteration</div>
+          <h2 class="cs-section__title">Designed for the feeling, not the plan.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Four lo-fi rounds in Figma — a 7-screen skeleton, a pure black/white/grey system that introduced “The Wall,” then two more rebuilt around what testing actually revealed. Interviews tell you what people <em>think</em> they'd do; watching them showed what they <em>actually</em> do — the hesitation, the wrong tap, the moment of relief.</p>
+        </div>
+        <div class="cs-screens reveal">
+          <img src="assets/case/arka/wire-1.png" alt="Arka wireframe — screen 1">
+          <img src="assets/case/arka/wire-2.png" alt="Arka wireframe — screen 2">
+          <img src="assets/case/arka/wire-3.png" alt="Arka wireframe — screen 3">
+        </div>
+        <p class="cs-cap">Early lo-fi wireframes — round two's pure black/white/grey system, where “The Wall” first appeared.</p>
+        <div class="cs-callout reveal">
+          <div class="cs-callout__label">The deepest lesson was emotional</div>
+          <p>People don't act the way they say they will — they're frightened, often guilty, just wanting to do right by the animal. So I designed for that feeling: calm, capable, and not alone. That's where the animal-details step came from, why location moved earlier, and why the vague “how it ended” screen became a clear “Your case” tracker. Only then did visual design go hi-fi: Inter, a 16-pt grid, rounded corners, a token-based colour system re-themeable from one place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTION -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">The Solution</div>
+          <h2 class="cs-section__title">Arka.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Not from a blank whiteboard, but from watching the same story repeat — a vet standing in as an unpaid triage desk, one lucky insider contact making the difference, and finders who'd rather do nothing than risk losing an animal to a shelter they didn't trust.</p>
+          <p>Arka triages first and routes to current responders second, always leaving room to help without giving the animal up. Wild finds get their own path, so a fledgling and an injured dog are never treated the same. And instead of a “found” post disappearing into the wrong Facebook group, the <strong>Wall</strong> gathers them by radius — so an owner searching from where their pet went missing can find it, with every case trackable to an outcome.</p>
+        </div>
+        <div class="cs-screens reveal">
+          <img src="assets/case/arka/solution-phone.png" alt="Arka — the hi-fi triage screen a finder first sees">
+        </div>
+        <p class="cs-cap">The final hi-fi entry screen — “Found an animal?”, the moment of need.</p>
+      </div>
+    </section>
+
+    <!-- WHY NOT CHATGPT -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Why not just ask ChatGPT?</div>
+          <h2 class="cs-section__title">A general LLM answers a question. Arka resolves a situation.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>Finders don't get stuck identifying the animal — the part a model is genuinely good at. They get stuck on routing, capacity, trust, and closure: coordination problems, not knowledge problems. A chatbot can't hold local, current, verified state, or act as a shared board between a finder and a searching owner. Arka isn't competing with the model — it's the layer its advice would need to route into.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCOPE -->
+    <section class="cs-section">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">Scope, honestly</div>
+          <h2 class="cs-section__title">A navigation layer, not a rescue-capacity fix.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>I started with three edges — A3 (stray reporting), A2 (foster burnout), A1 (returns) — and narrowed to A3 only. A2 was parked early (the burnt-out-foster population is nearly invisible to a survey); A1 stayed evidenced (44% of adopters returned or considered it) but never reached wireframes — real, researched, deliberately out of scope.</p>
+        </div>
+        <div class="cs-quote reveal">
+          <p>“Może tylko uspokoić znalazcę” — it can only calm the finder down.</p>
+          <cite>The wildlife responder, on what a reporting system alone can do</cite>
+        </div>
+        <div class="cs-body reveal" style="margin-top:24px;">
+          <p>The deeper constraint is state-level underfunding — no app resolves that. Arka's claim is narrow and honest: correct triage, current routing, a closed loop. Not the money behind it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RETROSPECTIVE -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow"><span class="cs-eyebrow__num">13</span> Retrospective</div>
+          <h2 class="cs-section__title">What I learned.</h2>
+        </div>
+        <div class="cs-cols reveal">
+          <div class="cs-card">
+            <div class="cs-card__label">What went well</div>
+            <ul class="cs-list">
+              <li>Understanding the problem, genuinely — the survey and six interviews kept pointing at the same pattern from different angles until its real shape was impossible to miss.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">What was hard</div>
+            <ul class="cs-list">
+              <li>Reaching real people and organizations took real commitment.</li>
+              <li>One coherent flow had to serve both a lost dog and an injured bird.</li>
+              <li>Some stories were genuinely heart-breaking, and stayed with me.</li>
+              <li>The problem kept getting bigger the more I researched it.</li>
+            </ul>
+          </div>
+          <div class="cs-card">
+            <div class="cs-card__label">What I'd do differently</div>
+            <ul class="cs-list">
+              <li>Trust the research to overturn my first instincts sooner — the shelter as “front door,” the first-30-days assumption, and “a directory fixes routing” all turned out wrong.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-quote reveal">
+          <p>What started as a project about lost dogs turned into a project about trust — rescue only really works if you already know someone on the inside. Arka is my attempt at closing that gap.</p>
+          <cite>Good intentions deserve better directions.</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEE IT MOVE -->
+    <section class="cs-section cs-section--tint">
+      <div class="cs-section__inner">
+        <div class="cs-section__head">
+          <div class="cs-eyebrow">See it move</div>
+          <h2 class="cs-section__title">The prototype, end to end.</h2>
+        </div>
+        <div class="cs-body reveal">
+          <p>From “found an animal” to a closed case — a full pass through the final prototype.</p>
+        </div>
+        <div class="cs-device-row reveal">
+          <div class="cs-device">
+            <video data-autoplay muted loop playsinline preload="metadata" src="assets/case/videos/arka-prototype.mp4"></video>
+          </div>
+        </div>
+        <p class="cs-cap">Prototype recording — reporting a found stray, from triage to a closed case. Plays silently.</p>
+        <div class="cs-hero__actions reveal" style="justify-content:center; margin-top:32px;">
+          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/fJ3T5UYHN63B6CtRnKB1QG/Arka?node-id=100-11&p=f&scaling=scale-down&page-id=96%3A2&starting-point-node-id=100%3A11" target="_blank" rel="noopener">Try it yourself — open the live prototype ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="cs-next">
+      <div class="cs-next__inner">
+        <div class="cs-next__eyebrow">Next case study</div>
+        <h2 class="cs-next__title">History Museum — skip the queue, keep the wonder.</h2>
+        <div class="cs-next__actions">
+          <a class="cs-btn cs-btn--onDark" href="case-museum.html">Read the next case study →</a>
+          <a class="cs-btn cs-btn--onDarkGhost" href="index.html#index">Back to all work</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__bottom">
+        <span class="site-footer__copy">© 2026 Dacjan Dorniok — Designed &amp; built by hand</span>
+        <span class="site-footer__meta"><span class="status-dot" aria-hidden="true"></span>Open to work · DE <span data-clock>--:--</span></span>
+        <button class="site-footer__top-btn" data-scroll-top type="button">Back to top</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image lightbox / preview -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close preview">✕</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="">
+  </div>
+
+  <script src="js/main.js?v=1784648000"></script>
+</body>
+</html>
