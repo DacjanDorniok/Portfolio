@@ -352,6 +352,7 @@
   var descEl = document.getElementById('projectDesc');
   var mockupEl = document.getElementById('projectMockup');
   var caseLink = document.getElementById('projectCaseLink');
+  var mockupLink = document.getElementById('projectMockupLink');
   var protoLink = document.getElementById('projectProtoLink');
   var ghostNum = document.getElementById('ghostNum');
   var track = document.getElementById('track');
@@ -375,6 +376,10 @@
     mockupEl.src = p.mockupSrc;
     mockupEl.alt = p.mockupAlt;
     if (caseLink) caseLink.href = p.caseUrl;
+    if (mockupLink) {
+      mockupLink.href = p.caseUrl;
+      mockupLink.setAttribute('aria-label', 'Open the ' + p.title + ' case study');
+    }
     protoLink.href = p.liveProtoUrl;
     ghostNum.textContent = '0' + (activeIndex + 1);
 
@@ -575,6 +580,62 @@
       heroText.style.transform = 'translate(0px, 0px)';
       phoneWrap.style.transform = 'translate(0px, 0px) rotate(0deg)';
     });
+  }
+
+  /* Tilt parallax — on touch layouts (no cursor) the same gentle drift
+     follows the phone's physical tilt instead. The first sensor reading
+     becomes the neutral pose (however the visitor happens to hold the
+     phone), and ±18° of tilt from there covers the same range the cursor
+     covers on desktop. Readings are eased through a rAF lerp so the
+     motion stays soft, never jittery. */
+  if (!prefersReducedMotion && 'DeviceOrientationEvent' in window) {
+    var tiltBase = null;
+    var tiltX = 0;
+    var tiltY = 0;
+    var tiltCurX = 0;
+    var tiltCurY = 0;
+    var tiltRaf = null;
+
+    function tiltFrame() {
+      tiltCurX += (tiltX - tiltCurX) * 0.08;
+      tiltCurY += (tiltY - tiltCurY) * 0.08;
+      heroImage.style.transform = 'translate(' + (tiltCurX * strength) + 'px, ' + (tiltCurY * strength) + 'px)';
+      heroText.style.transform = 'translate(' + (tiltCurX * -strength * 0.4) + 'px, ' + (tiltCurY * -strength * 0.4) + 'px)';
+      phoneWrap.style.transform = 'translate(' + (tiltCurX * -strength * 0.25) + 'px, ' + (tiltCurY * -strength * 0.25) + 'px) rotate(' + (tiltCurX * 3) + 'deg)';
+      if (Math.abs(tiltX - tiltCurX) > 0.001 || Math.abs(tiltY - tiltCurY) > 0.001) {
+        tiltRaf = window.requestAnimationFrame(tiltFrame);
+      } else {
+        tiltRaf = null;
+      }
+    }
+
+    function onTilt(e) {
+      if (!mobileLayout.matches) return; /* desktop keeps the cursor version */
+      if (e.gamma === null || e.beta === null) return;
+      if (tiltBase === null) tiltBase = { g: e.gamma, b: e.beta };
+      tiltX = Math.max(-0.5, Math.min(0.5, (e.gamma - tiltBase.g) / 36));
+      tiltY = Math.max(-0.5, Math.min(0.5, (e.beta - tiltBase.b) / 36));
+      if (!tiltRaf) tiltRaf = window.requestAnimationFrame(tiltFrame);
+    }
+
+    function armTilt() {
+      window.addEventListener('deviceorientation', onTilt);
+    }
+
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+      /* iOS asks the visitor for motion access, and the request must come
+         from a user gesture — piggyback on their first tap. If they
+         decline, the page simply stays still. */
+      var tiltAskOnce = function () {
+        window.removeEventListener('touchend', tiltAskOnce);
+        DeviceOrientationEvent.requestPermission().then(function (state) {
+          if (state === 'granted') armTilt();
+        }).catch(function () {});
+      };
+      window.addEventListener('touchend', tiltAskOnce, { passive: true });
+    } else {
+      armTilt();
+    }
   }
 
   activeIndex = 0;

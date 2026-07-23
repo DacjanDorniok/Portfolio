@@ -465,6 +465,13 @@ a:hover { color: var(--ink); }
   will-change: transform;
 }
 
+/* The mockup itself is a shortcut to the case study (the text button
+   below stays as the explicit route) */
+.showcase__phone-link {
+  display: block;
+  height: 100%;
+}
+
 .showcase__mockup {
   width: 100%;
   display: block;
@@ -1990,13 +1997,26 @@ a.collab-card:hover {
     padding: 8px 20px 48px;
   }
 
-  .hero__media { flex: 0 0 auto; padding: 8px 0; }
+  /* The character sits top-right BESIDE the DORN STUDIO title instead of
+     stacking above it — the whole hero rises, so the current project is
+     visible right from the first screen. Width is capped so it can never
+     reach the title (title lines stay in the left half). */
+  .hero__media {
+    flex: none;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    width: min(38vw, 290px);
+    min-width: 0; /* the desktop 220px floor would defeat the width cap */
+    padding: 0;
+    z-index: 0;
+  }
 
   .hero__body { flex: 0 0 auto; min-height: 0; }
 
   .hero__illustration {
-    width: min(64vw, 320px);
-    max-height: 40vh;
+    width: 100%;
+    max-height: none;
   }
 
   .hero__title { font-size: clamp(50px, 12vw, 96px); }
