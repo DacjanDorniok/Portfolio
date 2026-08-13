@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>History Museum · companion app prototype</title>
+    <meta name="description" content="Clickable prototype of the History Museum companion app — language onboarding, timed tickets, floor map and the Dinosaur Era tour." />
+
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- After app.css: the embed layer deliberately overrides the app's own
+         device rounding, which belongs to whatever frames it. -->
+    <link rel="stylesheet" href="css/embed.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="stage__fit">
+        <div id="phone" data-theme="dark" data-contrast="normal"></div>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+    <script>
+      /* The app is authored at a fixed 393 × 852 device viewport. Scale it to
+         whatever box it is dropped into — a case-study phone frame, or a full
+         browser window — instead of reflowing the layout. */
+      (function () {
+        var W = 393,
+          H = 852;
+        var fit = document.querySelector(".stage__fit");
+        var stage = document.querySelector(".stage");
+
+        function apply() {
+          var s = Math.min(stage.clientWidth / W, stage.clientHeight / H);
+          fit.style.transform = "scale(" + s + ")";
+          fit.style.width = W + "px";
+          fit.style.height = H + "px";
+        }
+
+        apply();
+        window.addEventListener("resize", apply);
+        if (window.ResizeObserver) new ResizeObserver(apply).observe(stage);
+      })();
+    </script>
+  </body>
+</html>

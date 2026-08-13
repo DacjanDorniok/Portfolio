@@ -1,0 +1,43 @@
+/* The page around the app in the portfolio build. Deliberately almost nothing:
+   the case study supplies its own device frame, and when this page is opened on
+   its own the app simply centres itself on ink. */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b0a09;
+  overscroll-behavior: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.stage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Scaled by the inline script to fit whatever box the page is given. */
+.stage__fit {
+  transform-origin: center center;
+  flex: none;
+}
+
+/* Corner rounding belongs to whoever frames the app — the case study's phone
+   body, or nothing at all when the page is opened on its own. The app's own
+   44px radius would scale with the fit transform and never line up. */
+#phone {
+  border-radius: 0;
+}

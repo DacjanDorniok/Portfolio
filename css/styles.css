@@ -2744,6 +2744,25 @@ a.collab-card:hover {
   background: #000;
 }
 
+/* ---- Live prototype in the same device body ----
+   The prototype is a real page in an iframe rather than a recording, so the
+   frame gets a little more width to keep tap targets honest. The app scales
+   itself to whatever box it is given. */
+.cs-device--live {
+  width: min(360px, 86vw);
+}
+
+.cs-device__app {
+  display: block;
+  width: 100%;
+  aspect-ratio: 393 / 852;
+  border: 0;
+  border-radius: 36px;
+  background: #0B0A09;
+  /* Own the gestures inside the frame; the page keeps scrolling past it. */
+  touch-action: manipulation;
+}
+
 /* Hi-fi phone-screen gallery */
 .cs-screens {
   display: flex;

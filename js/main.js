@@ -329,10 +329,10 @@
     {
       title: 'History Museum',
       desc: 'A UX case study and mobile app concept for a natural history museum, turning a queue-bound, easy-to-get-lost visit into a companion-guided experience with timed entry, live crowd maps, and accessibility built in from the first tap.',
-      mockupSrc: 'assets/mockup-museum.png',
+      mockupSrc: 'assets/mockup-museum.png?v=2026081301',
       mockupAlt: 'History Museum on iPhone mockup',
       caseUrl: 'case-museum.html',
-      liveProtoUrl: 'https://www.figma.com/proto/n56QXwGyZoMEDtL3hIBC8Z/-Dino----WIngs---Museum--Copy---Copy-?node-id=3012-4590&p=f&scaling=min-zoom&page-id=3012%3A4589&starting-point-node-id=3012%3A4590'
+      liveProtoUrl: 'prototypes/museum/index.html'
     },
     {
       title: 'Schuh-Werk & Statik',

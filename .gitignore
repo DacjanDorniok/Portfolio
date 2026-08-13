@@ -3,3 +3,9 @@ Material/
 Portfolio redesign with brighter style-handoff/
 Portfolio redesign with brighter style-handoff.zip
 .claude/
+
+# macOS
+.DS_Store
+
+# Screen exports for mockup work — not referenced by the site
+assets/case/museum/screen-home@*.jpg

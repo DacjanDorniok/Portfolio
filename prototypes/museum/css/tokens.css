@@ -1,0 +1,134 @@
+/* Design tokens for the History Museum companion app.
+   Themes and the type scale are driven by data attributes / a --scale variable
+   on the device root, so state changes never have to rewrite inline styles. */
+
+:root {
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-ui: Manrope, system-ui, -apple-system, sans-serif;
+
+  --page-bg: #0b0a09;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --screen-in: 0.5s var(--ease);
+  --sheet-in: 0.42s var(--ease);
+
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.55'/></svg>");
+}
+
+/* --- Themes -------------------------------------------------------------- */
+
+[data-theme] {
+  --scale: 1;
+
+  --t-xs: calc(11px * var(--scale));
+  --t-sm: calc(13px * var(--scale));
+  --t-md: calc(16px * var(--scale));
+  --t-lg: calc(20px * var(--scale));
+  --t-xl: calc(26px * var(--scale));
+  --t-2xl: calc(34px * var(--scale));
+  --t-dis: calc(46px * var(--scale));
+}
+
+[data-theme="dark"] {
+  --bg: #12100e;
+  --surface: #1a1714;
+  --raise: #231f1a;
+  --ink: #f0e6d3;
+  --ink-2: rgba(240, 230, 211, 0.66);
+  --ink-3: rgba(240, 230, 211, 0.4);
+  --line: rgba(240, 230, 211, 0.14);
+  --line-2: rgba(240, 230, 211, 0.07);
+  --amber: #e08b3a;
+  --amber-2: #d4782f;
+  --crimson: #c4443e;
+  /* Ink that always reads against a photographic hero, in either theme. */
+  --on-photo: #f0e6d3;
+  --on-amber: #12100e;
+}
+
+[data-theme="light"] {
+  --bg: #ede2cb;
+  --surface: #f6eedd;
+  --raise: #fcf7ec;
+  --ink: #1a1714;
+  --ink-2: rgba(26, 23, 20, 0.68);
+  --ink-3: rgba(26, 23, 20, 0.44);
+  --line: rgba(26, 23, 20, 0.14);
+  --line-2: rgba(26, 23, 20, 0.07);
+  --amber: #b5641e;
+  --amber-2: #c46f22;
+  --crimson: #b5312c;
+  --on-photo: #f0e6d3;
+  /* Dark ink on the amber fill in both themes — it out-contrasts cream there. */
+  --on-amber: #12100e;
+}
+
+/* Higher-contrast variant: only the low-emphasis tokens move. */
+[data-theme="dark"][data-contrast="high"] {
+  --ink-2: rgba(240, 230, 211, 0.88);
+  --ink-3: rgba(240, 230, 211, 0.66);
+  --line: rgba(240, 230, 211, 0.3);
+  --line-2: rgba(240, 230, 211, 0.16);
+}
+
+[data-theme="light"][data-contrast="high"] {
+  --ink-2: rgba(26, 23, 20, 0.88);
+  --ink-3: rgba(26, 23, 20, 0.66);
+  --line: rgba(26, 23, 20, 0.32);
+  --line-2: rgba(26, 23, 20, 0.16);
+}
+
+/* --- Motion -------------------------------------------------------------- */
+
+@keyframes hm-grain {
+  0% { transform: translate3d(0, 0, 0); }
+  25% { transform: translate3d(-3%, 2%, 0); }
+  50% { transform: translate3d(2%, -3%, 0); }
+  75% { transform: translate3d(-2%, -2%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes hm-pulse {
+  0% { transform: scale(0.55); opacity: 0.75; }
+  70%, 100% { transform: scale(2.1); opacity: 0; }
+}
+
+@keyframes hm-spin { to { transform: rotate(360deg); } }
+
+@keyframes hm-breathe {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@keyframes hm-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes hm-sweep {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(320%); }
+}
+
+@keyframes hm-drift {
+  from { transform: scale(1.06) translate3d(0, 0, 0); }
+  to { transform: scale(1.14) translate3d(-1.5%, -1.5%, 0); }
+}
+
+@keyframes hm-dash { to { stroke-dashoffset: -22; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

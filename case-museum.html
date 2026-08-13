@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1784975500">
+  <link rel="stylesheet" href="css/styles.css?v=1786819800">
   <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
 </head>
 <body class="is-scrollable">
@@ -52,11 +52,11 @@
         </div>
 
         <div class="cs-hero__actions">
-          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/n56QXwGyZoMEDtL3hIBC8Z/-Dino----WIngs---Museum--Copy---Copy-?node-id=3012-4590&p=f&scaling=min-zoom&page-id=3012%3A4589&starting-point-node-id=3012%3A4590" target="_blank" rel="noopener">Open live prototype ↗</a>
+          <a class="cs-btn cs-btn--primary" href="prototypes/museum/index.html" target="_blank" rel="noopener">Open live prototype ↗</a>
         </div>
       </div>
       <div class="cs-hero__figure">
-        <img src="assets/mockup-museum.png" alt="History Museum companion app shown on an iPhone">
+        <img src="assets/mockup-museum.png?v=2026081301" alt="History Museum companion app shown on an iPhone">
       </div>
     </section>
 
@@ -64,7 +64,7 @@
     <section class="cs-section cs-section--wide">
       <div class="cs-section__inner">
         <div class="cs-figrow cs-figrow--pair reveal">
-          <figure class="cs-figure" style="margin:0;"><img src="assets/case/museum/overview-1.jpg" alt="History Museum — overview visual"></figure>
+          <figure class="cs-figure" style="margin:0;"><img src="assets/case/museum/overview-1.jpg?v=2026081303" alt="History Museum — overview visual"></figure>
           <figure class="cs-figure" style="margin:0;"><img src="assets/case/museum/overview-2.jpg" alt="History Museum — the visit experience"></figure>
         </div>
       </div>
@@ -326,9 +326,9 @@
           <p>Accessibility isn't a settings page you find on day three. The first run asks for your language — including British Sign Language — lets you set font size with a live slider, and choose light, dark, or auto appearance. <strong>Mei is welcomed before she ever reaches a ticket counter.</strong></p>
         </div>
         <div class="cs-screens reveal">
-          <img src="assets/case/museum/onboard-1.png" alt="Onboarding — language selection">
-          <img src="assets/case/museum/onboard-2.png" alt="Onboarding — font size slider">
-          <img src="assets/case/museum/onboard-3.png" alt="Onboarding — appearance">
+          <img src="assets/case/museum/onboard-1.jpg" alt="Onboarding — language selection">
+          <img src="assets/case/museum/onboard-2.jpg" alt="Onboarding — font size slider">
+          <img src="assets/case/museum/onboard-3.jpg" alt="Onboarding — appearance">
         </div>
         <p class="cs-cap">Onboarding screens — language choice (incl. British Sign Language), live font-size slider, and appearance.</p>
       </div>
@@ -345,9 +345,9 @@
           <p>Date, time slot, visitor count — then a detail we're proud of: you choose a starting tour and gate. Full gates are marked, so crowds distribute themselves before anyone arrives. Each ticket can add a free locker and accessibility accommodations, and ends in a QR ticket that lives in the app, your wallet, or your email — <em>Luis's Rotterdam hour, deleted.</em></p>
         </div>
         <div class="cs-screens reveal">
-          <img src="assets/case/museum/ticket-1.png" alt="Ticketing — date and time slot">
-          <img src="assets/case/museum/ticket-2.png" alt="Ticketing — gate and accommodations">
-          <img src="assets/case/museum/ticket-3.png" alt="Ticketing — QR ticket">
+          <img src="assets/case/museum/ticket-1.jpg" alt="Ticketing — date and time slot">
+          <img src="assets/case/museum/ticket-2.jpg" alt="Ticketing — gate and accommodations">
+          <img src="assets/case/museum/ticket-3.jpg" alt="Ticketing — QR ticket">
         </div>
         <p class="cs-cap">Ticketing screens — date &amp; time slot, gate choice with full gates marked, and the final QR ticket.</p>
       </div>
@@ -364,9 +364,9 @@
           <p>The interactive floor map shows every level, numbers every artefact, and marks overcrowded areas in real time — so “let's skip that room for now” becomes a one-glance decision. Reach the thing you came for, scan its QR code — or type its number if the crowd beat you to it — and it opens with an audio guide, origin story, and deeper reading. Curated tours like <em>Dinosaur Era</em> (4 stops, 45 minutes) chain it all into a narrative.</p>
         </div>
         <div class="cs-screens reveal">
-          <img src="assets/case/museum/find-1.png" alt="Wayfinding — interactive floor map">
-          <img src="assets/case/museum/find-2.png" alt="Wayfinding — artefact detail">
-          <img src="assets/case/museum/find-3.png" alt="Wayfinding — curated tour">
+          <img src="assets/case/museum/find-1.jpg" alt="Wayfinding — interactive floor map">
+          <img src="assets/case/museum/find-2.jpg" alt="Wayfinding — artefact detail">
+          <img src="assets/case/museum/find-3.jpg" alt="Wayfinding — curated tour">
         </div>
         <p class="cs-cap">Wayfinding screens — the live floor map, an artefact opened with its audio guide, and a curated tour.</p>
       </div>
@@ -442,13 +442,18 @@
           <p>Every fix from testing folded back into the design — this walkthrough shows the final prototype end to end, through the Dinosaur Era tour.</p>
         </div>
         <div class="cs-device-row reveal">
-          <div class="cs-device">
-            <video data-autoplay muted loop playsinline preload="metadata" src="assets/case/videos/museum-prototype.mp4"></video>
+          <div class="cs-device cs-device--live">
+            <iframe
+              class="cs-device__app"
+              src="prototypes/museum/index.html"
+              title="History Museum companion app — interactive prototype"
+              loading="lazy"
+              allow="fullscreen"></iframe>
           </div>
         </div>
-        <p class="cs-cap">Prototype recording — language onboarding, a timed ticket, and the Dinosaur Era tour. Plays silently.</p>
+        <p class="cs-cap">The real prototype, running here — tap through language onboarding, a timed ticket, and the Dinosaur Era tour.</p>
         <div class="cs-hero__actions reveal" style="justify-content:center; margin-top:32px;">
-          <a class="cs-btn cs-btn--primary" href="https://www.figma.com/proto/n56QXwGyZoMEDtL3hIBC8Z/-Dino----WIngs---Museum--Copy---Copy-?node-id=3012-4590&p=f&scaling=min-zoom&page-id=3012%3A4589&starting-point-node-id=3012%3A4590" target="_blank" rel="noopener">Try it yourself — open the live prototype ↗</a>
+          <a class="cs-btn cs-btn--primary" href="prototypes/museum/index.html" target="_blank" rel="noopener">Try it yourself — open the live prototype ↗</a>
         </div>
       </div>
     </section>
@@ -483,6 +488,6 @@
     <img class="lightbox__img" id="lightboxImg" src="" alt="">
   </div>
 
-  <script src="js/main.js?v=1784975500"></script>
+  <script src="js/main.js?v=1786819800"></script>
 </body>
 </html>
